@@ -119,15 +119,15 @@ def checkProduct(lst, productName):
 
 def sendEmail(self):
     # set up the SMTP server
-    s = smtplib.SMTP(host='smtp-mail.outlook.com', port=587)
+    s = smtplib.SMTP(host='smtp-mail.outlook.com', port=587) #CHANGE HOST AND PORT IF NOT USING OUTLOOK
     s.starttls()
-    s.login('antonio_@live.ca', 'ANT0nio1!1!2299')
+    s.login('EMAIL', 'PASSWORD') #ADD USERNAME AND PASSWORD HERE
 
     msg = MIMEMultipart()     
     message = "The item \"%s\" is out of stock. It costs $%.2f and was bought from %s" % (self.name, float(self.price), self.pageUrl)
     
-    msg['From']= 'antonio_@live.ca'
-    msg['To']= 'antonio_@live.ca'
+    msg['From']= 'EMAIL' #ADD SENDER EMAIL 
+    msg['To']= 'EMAIL' #ADD RECIPIENT EMAIL
     msg['Subject']= "OUT OF STOCK"
         
     # add in the message body
