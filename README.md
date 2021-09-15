@@ -1,4 +1,7 @@
 # Inventory
+
+FIRST TRY AT MAKING A GUI. NOT THE BEST
+
 Python inventory tracker GUI
 
 GUI was built using PyQt5 and functions were imported from inventory module to supplement functionality.
